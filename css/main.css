@@ -273,7 +273,7 @@ section.project {
 }
 
 .hire-me-panel {
-    margin-top: 100px;
+    margin-top: 50px;
     background-color: #202060;
     padding: 20px 40px;
     display: flex;
@@ -340,6 +340,7 @@ section.project {
 /* === === contact start === === */
 section.contact {
     margin-bottom: 100px;
+    margin-top: 150px;
 }
 
 .contact-caption {
@@ -411,6 +412,7 @@ footer p {
     background-color: #FF4301;
     z-index: 10;
     transition: 0.5s;
+    display: none;
 }
 
 .back-to-top img {
@@ -453,6 +455,15 @@ footer p {
     to {
         transform: translateY(0px);
         opacity: 1;
+    }
+}
+
+@keyframes floating {
+    from {
+        transform: translateY(15px);
+    }
+    to {
+        transform: rotate(-10deg);
     }
 }
 
@@ -539,17 +550,20 @@ footer p {
         width: 140px;
         top: 40%;
         right: 60px;
+        animation: floating 1s infinite alternate ease;
     }
 
     #triangle-blur{
         width: 100px;
         left: 90px;
+        animation: floating 1.5s infinite alternate ease;
     }
 
     #box-blur {
         width: 150px;
         bottom: 100px;
         left: 70px;
+        animation: box-shape 2s infinite alternate ease;
     }
 }
 
