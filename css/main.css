@@ -164,7 +164,6 @@ section.service {
     width: 32%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     min-height: 300px;
     padding: 70px 30px;
     margin: 10px 0px;
