@@ -4,6 +4,7 @@ const navLinks = document.querySelectorAll(".nav-links li")
 const categories = document.querySelectorAll('.category-item')
 const projects = document.querySelectorAll(".card-project")
 const toTop = document.querySelector(".back-to-top")
+const service = document.querySelector(".service")
 
 // navbar
 toggleMenu.addEventListener('click', function(){
@@ -60,13 +61,11 @@ categories.forEach(category => {
 })
 
 // back to top
-
-
 window.addEventListener("scroll", ()=> {
-    if( window.scrollY > document.querySelector(".service").offsetTop ){
-        toTop.style.display = "flex"
+    if( window.scrollY > document.querySelector(".service").offsetTop - document.querySelector(".hero").clientHeight ){
+        toTop.style.opacity = 1;
     }
     else {
-        toTop.style.display = "none"
+        toTop.style.opacity = 0
     }
 })
